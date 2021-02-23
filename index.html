@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>User Management</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">User Management</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="user_gender">
+                <div class="radio">
+                    <h4>Pick a gender</h4>
+                    <label><input type="radio" value="all" name="gender" checked="true"> All</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="male" name="gender"> Male</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="female" name="gender"> Female</label>
+                </div>
+            </div>
+            <div class="num_results">
+                <form id ="results_form">
+                    <input type="text" maxlength="3" minlength="1" name="num" id="num" placeholder="Number of results (1-999)" />
+                    <input id="submitResults" name="submitResults" type="submit" value="Get Results" />
+                </form>
+            </div>
+            <div class="user_nationality">
+                <h4>Pick a nationality</h4>
+                <select class="form-select" id="nationality" multiple aria-label="multiple select example">
+                    <option selected value="au">AU</option>
+                    <option value="br">BR</option>
+                    <option value="ca">CA</option>
+                    <option value="ch">CH</option>
+                    <option value="de">DE</option>
+                    <option value="dk">DK</option>
+                    <option value="es">ES</option>
+                    <option value="fi">FI</option>
+                    <option value="fr">FR</option>
+                    <option value="gb">GB</option>
+                    <option value="ie">IE</option>
+                    <option value="ir">IR</option>
+                    <option value="no">NO</option>
+                    <option value="nl">NL</option>
+                    <option value="nz">NZ</option>
+                    <option value="tr">TR</option>
+                    <option value="us">US</option>
+                </select>
+            </div>
+            <div class="card-columns" id="result"> </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+</html>
